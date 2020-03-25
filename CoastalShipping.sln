@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoastalShipping.Api", "CoastalShipping.Api\CoastalShipping.Api.csproj", "{7330D4A8-3446-4D08-B523-3C52FD5630D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoastalShipping.AngularClient", "CoastalShipping.AngularClient\CoastalShipping.AngularClient.csproj", "{71396CF7-AD77-4103-B68A-E4FD568783A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7330D4A8-3446-4D08-B523-3C52FD5630D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7330D4A8-3446-4D08-B523-3C52FD5630D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7330D4A8-3446-4D08-B523-3C52FD5630D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7330D4A8-3446-4D08-B523-3C52FD5630D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71396CF7-AD77-4103-B68A-E4FD568783A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71396CF7-AD77-4103-B68A-E4FD568783A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71396CF7-AD77-4103-B68A-E4FD568783A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71396CF7-AD77-4103-B68A-E4FD568783A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EB5E840-8F21-4F4F-A46A-D98A65371A6D}
+	EndGlobalSection
+EndGlobal

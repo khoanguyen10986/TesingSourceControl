@@ -1,0 +1,3 @@
+## Angular Dynamic Form:
+- Using dynamic form to populate: textbox, dropdown,... to pages
+- Including validations: required, email, datetime format, number,...

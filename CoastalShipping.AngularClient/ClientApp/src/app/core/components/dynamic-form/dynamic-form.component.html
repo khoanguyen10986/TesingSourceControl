@@ -1,0 +1,16 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+
+    <div *ngFor="let field of fields" class="form-row">
+      <app-dynamic-child-form [form]="form" [field]="field" (getFormChanges)="formChange($event)"></app-dynamic-child-form>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" [disabled]="!form.valid">Save</button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad && form.valid">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>
+</div>

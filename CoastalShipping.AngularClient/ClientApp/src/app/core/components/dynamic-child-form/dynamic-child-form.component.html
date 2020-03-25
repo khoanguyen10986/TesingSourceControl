@@ -1,0 +1,27 @@
+<div [formGroup]="form">
+
+  <label [attr.for]="field.key">{{field.label}}</label>
+
+  <div [ngSwitch]="field.controlType">
+    <input *ngIf="field.controlType == 'textbox' || field.controlType == 'number'" [size]="field.length" [formControlName]="field.key" [id]="field.key" [type]="field.type" (change)="valueChange($event)">
+
+    <div *ngIf="field.controlType =='datetime'">
+      <input placeholder="dd/MMM/yyyy" [size]="field.length" [formControlName]="field.key" [id]="field.key" [owlDateTimeTrigger]="dt" [owlDateTime]="dt" (change)="valueChange($event)">
+      <owl-date-time #dt></owl-date-time>
+    </div>
+
+    <textarea *ngIf="field.controlType=='textarea'" [formControlName]="field.key" [id]="field.key" [rows]="field.rows" [cols]="field.cols" (change)="valueChange($event)"></textarea>
+
+    <select *ngIf="field.controlType=='dropdown'" [size]="field.length" [id]="field.key " [formControlName]="field.key " (change)="valueChange($event)">
+      <option *ngFor="let opt of field.options" [value]="opt.key ">{{opt.value}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="isEdited">
+    <div class="errorMessage alert alert-danger" *ngIf="needsAValue">{{field.label}} is a required field</div>
+    <div class="errorMessage alert alert-danger" *ngIf="!isEmailValid">{{field.label}} is an invalid email</div>
+    <div class="errorMessage alert alert-danger" *ngIf="!isDateTimeValid">{{field.label}} is an invalid date (format dd/MMM/yyyy)</div>
+    <div class="errorMessage alert alert-danger" *ngIf="!isNumberValid">{{field.label}} is an invalid number</div>
+  </div>
+
+</div>
